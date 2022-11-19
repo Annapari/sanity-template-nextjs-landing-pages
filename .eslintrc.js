@@ -1,3 +1,5 @@
+const {ESLint} = require('eslint')
+
 module.exports = {
   extends: [
     'next',
@@ -7,6 +9,7 @@ module.exports = {
     'plugin:import/errors',
     'plugin:import/warnings',
     'plugin:react/recommended',
+    'ESLint:recommended',
   ],
   rules: {
     'object-curly-spacing': ['error', 'never'],

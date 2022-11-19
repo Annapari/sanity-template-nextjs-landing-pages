@@ -25,7 +25,7 @@ function ImageSection(props) {
         />
         <figcaption>
           <div className={styles.caption}>
-            z<div className={styles.label}>{label}</div>
+            <div className={styles.label}>{label}</div>
             <h2 className={styles.title}>{heading}</h2>
             {text && <SimpleBlockContent blocks={text} />}
             {cta && cta.route && <Cta {...cta} />}

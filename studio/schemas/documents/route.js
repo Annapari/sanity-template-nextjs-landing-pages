@@ -34,6 +34,7 @@ export default {
       description: 'Hide this route for search engines',
     },
   ],
+
   preview: {
     select: {
       slug: 'slug.current',
