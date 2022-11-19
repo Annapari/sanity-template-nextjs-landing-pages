@@ -1,7 +1,7 @@
 export default {
   type: 'object',
   name: 'mailchimp',
-  title: 'Mailchimp newsletter signup',
+  title: 'Mailchimp Collectors Club signup',
   fields: [
     {
       name: 'heading',
@@ -28,7 +28,7 @@ export default {
     prepare({title}) {
       return {
         title,
-        subtitle: 'Mailchimp newsletter signup section',
+        subtitle: 'Mailchimp Collectors Club Signup section',
       }
     },
   },

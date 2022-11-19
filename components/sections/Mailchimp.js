@@ -17,8 +17,15 @@ export default function Mailchimp(props) {
             fields={[
               {
                 name: 'EMAIL',
-                placeholder: 'Email',
+                placeholder: 'Your Email ',
                 type: 'email',
+                className: styles.email,
+                required: true,
+              },
+              {
+                name: 'NAME',
+                placeholder: 'Your Name',
+                type: 'name',
                 className: styles.email,
                 required: true,
               },
@@ -40,11 +47,11 @@ export default function Mailchimp(props) {
             }}
             messages={{
               sending: 'Sending...',
-              success: 'Thank you for subscribing!',
+              success: 'Thank you for joining the Collectors Club !',
               error: 'An unexpected internal error has occurred.',
-              empty: 'You must write an e-mail.',
+              empty: 'You must write a valid input.',
               duplicate: 'Already subscribed',
-              button: 'Subscribe!',
+              button: 'Join the club!',
             }}
             className={styles.form}
           />

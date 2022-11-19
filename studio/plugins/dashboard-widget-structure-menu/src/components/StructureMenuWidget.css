@@ -33,6 +33,7 @@
   text-decoration: none;
   text-align: center;
   box-sizing: border-box;
+  cursor: pointer;
 }
 
 .iconWrapper {

@@ -7,26 +7,28 @@ import SimpleBlockContent from './SimpleBlockContent'
 import {getPathFromSlug, slugParamToPath} from '../utils/urls'
 
 function Footer(props) {
-  const {navItems, text, router} = props
+  const {navItems, router, text} = props
   return (
     <div className={styles.root}>
-      <nav>
-        <ul className={styles.items}>
-          {navItems &&
-            navItems.map((item) => {
-              const isActive = slugParamToPath(router.query.slug) === item.slug.current
-              return (
-                <li key={item._id} className={styles.item}>
-                  <Link href={getPathFromSlug(item.slug.current)}>
-                    <a data-is-active={isActive ? 'true' : 'false'} aria-current={isActive}>
-                      {item.title}
-                    </a>
-                  </Link>
-                </li>
-              )
-            })}
-        </ul>
-      </nav>
+      <div className={styles.footerContainer}>
+        <nav>
+          <ul className={styles.items}>
+            {navItems &&
+              navItems.map((item) => {
+                const isActive = slugParamToPath(router.query.slug) === item.slug.current
+                return (
+                  <li key={item._id} className={styles.item}>
+                    <Link href={getPathFromSlug(item.slug.current)}>
+                      <a data-is-active={isActive ? 'true' : 'false'} aria-current={isActive}>
+                        {item.title}
+                      </a>
+                    </Link>
+                  </li>
+                )
+              })}
+          </ul>
+        </nav>
+      </div>
       <div className={styles.text}>
         <SimpleBlockContent blocks={text} />
       </div>
@@ -47,6 +49,12 @@ Footer.propTypes = {
     query: PropTypes.shape({
       slug: PropTypes.string,
     }),
+  }),
+  logo: PropTypes.shape({
+    asset: PropTypes.shape({
+      url: PropTypes.string,
+    }),
+    logo: PropTypes.string,
   }),
 }
 

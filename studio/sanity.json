@@ -1,5 +1,9 @@
 {
   "root": true,
+  "api": {
+    "projectId": "9yuxo94v",
+    "dataset": "production"
+  },
   "project": {
     "name": "Next.js landing pages",
     "basePath": "/studio"
@@ -11,7 +15,8 @@
     "@sanity/dashboard",
     "@sanity/desk-tool",
     "dashboard-widget-structure-menu",
-    "dashboard-widget-document-list"
+    "dashboard-widget-document-list",
+    "media"
   ],
   "env": {
     "development": {

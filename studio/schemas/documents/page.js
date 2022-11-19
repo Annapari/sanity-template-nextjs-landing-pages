@@ -21,7 +21,13 @@ export default {
       name: 'content',
       type: 'array',
       title: 'Page sections',
-      of: [{type: 'hero'}, {type: 'imageSection'}, {type: 'mailchimp'}, {type: 'textSection'}],
+      of: [
+        {type: 'gallery'},
+        {type: 'hero'},
+        {type: 'imageSection'},
+        {type: 'mailchimp'},
+        {type: 'textSection'},
+      ],
     },
     {
       name: 'description',

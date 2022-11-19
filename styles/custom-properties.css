@@ -2,15 +2,23 @@
   --wide-container: 60rem;
   --narrow-container: 40rem;
 
-  --font-family-sans: -apple-system, BlinkMacSystemFont, sans-serif;
+  /* --font-family-sans: -apple-system, BlinkMacSystemFont, sans-serif; */
+  --font-family-sans: 'Roboto', 'Raleway', sans-serif;
 
   --color-black: #202123;
   --color-dark-gray: #32373e;
   --color-gray: #697a90;
-  --color-light-gray: #b4bcc7;
+  --color-light-gray: #c9d0d8;
   --color-very-light-gray: #e7ebed;
   --color-white: #fff;
   --color-accent: #156dff;
+  --color-coral-orange: #ea8a7c;
+  --color-pink: #d1386c;
+  --color-brown: #b65b2f;
+  --color-navy-blue: #343b45;
+  --color-gold: #feac56;
+  --color-light-gold: #fdac53;
+  --color-light-blue: #9ab8d3;
 
   /* Typography */
   --unit: 16;

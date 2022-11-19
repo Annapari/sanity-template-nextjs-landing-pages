@@ -76,7 +76,7 @@ export const getServerSideProps = async ({params}) => {
 
 const builder = imageUrlBuilder(client)
 
-const LandingPage = (props) => {
+const HomePage = (props) => {
   const {
     title = 'Missing title',
     description,
@@ -129,7 +129,7 @@ const LandingPage = (props) => {
   )
 }
 
-LandingPage.propTypes = {
+HomePage.propTypes = {
   title: PropTypes.string,
   description: PropTypes.string,
   slug: PropTypes.string,
@@ -139,4 +139,4 @@ LandingPage.propTypes = {
   config: PropTypes.any,
 }
 
-export default LandingPage
+export default HomePage

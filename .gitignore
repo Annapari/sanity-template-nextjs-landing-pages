@@ -2,7 +2,9 @@
 .DS_Store
 
 # Dependency directories
-/node_modules
+node_modules
+/.pnp
+.pnp.js
 
 # lerna files
 /lerna-debug.log
@@ -69,3 +71,9 @@ public/studio/*
 studio/package-lock.json
 yarn.lock
 !studio/yarn.lock
+
+# testing
+/coverage
+
+# production
+build

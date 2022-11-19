@@ -28,6 +28,20 @@ export default {
       type: 'cta',
       title: 'Call to action',
     },
+    {
+      name: 'metaImage',
+      title: 'Image with metadata',
+      type: 'image',
+      options: {
+        metadata: [
+          'blurhash', // Default: included
+          'lqip', // Default: included
+          'palette', // Default: included
+          'exif', // Default: not included
+          'location', // Default: not included
+        ],
+      },
+    },
   ],
   preview: {
     select: {
