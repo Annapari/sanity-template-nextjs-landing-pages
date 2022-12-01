@@ -9,9 +9,12 @@ A website built for client to showcase her artwork.
 
 ## Set up if you need to download the files
 
-You'll need to clone the GitHub repo or download the files to your local drive.
+You'll need to clone the GitHub repo or download the files to your local drive. To quickly do this run a terminal on your computer and cd/mkdir for the project to be save into.
+then run this code to clone the git repo
 
-Open in visual studio code and check the `.env` file has stored a few environment variables that Next will use to pull data from the Sanity API.
+$ git clone 
+
+Open in visual studio code and save a new `.env` file to the main project folder. This will store a few environment variables that Next will use to pull data from the Sanity API.
 
 
 The Project ID is an alphanumeric 8-character string.
@@ -30,6 +33,12 @@ $ cd studio
 $ npx @sanity/cli install
 
 ----
+
+## insert an email address to test the contact form
+
+sanity-template-nextjs-landing-pages/pages/api/contact.js
+line 18, insert an email address to recieve the submitted emails
+
 ## After you have the files, run the Studio and the Website using localhost
 
 Run Sanity Studio:
