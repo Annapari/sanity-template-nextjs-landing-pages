@@ -14,7 +14,7 @@ function Figure({node}) {
   return (
     <figure className={styles.content}>
       <img
-        src={builder.image(asset).auto('format').width(2000).url()}
+        src={builder.image(asset).auto('format').width(200).url()}
         className={styles.image}
         alt={alt}
       />

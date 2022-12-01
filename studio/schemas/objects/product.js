@@ -4,8 +4,8 @@ export default {
   type: 'document',
   fields: [
     {
-      name: 'name',
-      title: 'Name',
+      name: 'title',
+      title: 'Title',
       type: 'string',
     },
     {
@@ -37,7 +37,7 @@ export default {
           title: 'Slug',
           type: 'slug',
           options: {
-            source: 'name',
+            source: 'title',
             maxLength: 96,
           },
         },
@@ -51,7 +51,24 @@ export default {
           title: 'Category',
           type: 'string',
         },
-
+        {
+          name: 'price',
+          title: 'Price',
+          type: 'number',
+        },
+        {
+          title: 'Tags',
+          name: 'tags',
+          type: 'array',
+          of: [
+            {
+              type: 'string',
+            },
+          ],
+          options: {
+            layout: 'tags',
+          },
+        },
         {
           name: 'countInStock',
           title: 'CountInStock',

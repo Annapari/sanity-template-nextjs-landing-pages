@@ -2,10 +2,10 @@
 
 .root {
   position: relative;
-  padding: 2rem 0;
+  padding: 1rem 0;
 
   @media (--media-min-medium) {
-    padding: 4rem 0;
+    padding: 2rem 0;
   }
 }
 
@@ -28,22 +28,19 @@
 
 .image {
   display: block;
-  width: 100%;
+  /* display: flex; */
+  max-height: 25vw;
+  width: auto;
+  margin: auto;
 }
-
 .content {
   position: relative;
   margin: 0 1.5rem;
   max-width: var(--width-medium);
 
-  @nest & figcaption {
-    width: 100%;
-    box-sizing: border-box;
-  }
-
   @media (--media-min-medium) {
     margin: 0 auto;
-    padding-top: 2rem;
+    /* padding-top: 0.2rem; */
 
     @nest & figcaption {
       position: absolute;

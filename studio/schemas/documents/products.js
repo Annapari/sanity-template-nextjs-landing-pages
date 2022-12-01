@@ -12,12 +12,19 @@ export default {
       type: 'string',
     },
     {
-      name: 'mainImage',
-      title: 'Main Image',
+      name: 'image',
+      title: 'Image',
       type: 'image',
       options: {
         hotspot: true,
       },
+      fields: [
+        {
+          name: 'alt',
+          type: 'string',
+          title: 'Alternative text',
+        },
+      ],
     },
     {
       name: 'description',
@@ -28,7 +35,14 @@ export default {
     {
       name: 'categories',
       title: 'Categories',
-      type: 'string',
+      // type: 'string',
+      type: 'array',
+      of: [
+        {
+          type: 'reference',
+          to: {type: 'category'},
+        },
+      ],
     },
 
     {
@@ -36,11 +50,40 @@ export default {
       title: 'Slug',
       type: 'slug',
       options: {
-        source: 'title',
+        source: (doc, options) => options.parent.title,
         maxLength: 96,
       },
     },
+    {
+      name: 'price',
+      title: 'Price',
+      type: 'number',
+    },
+    {
+      name: 'size',
+      title: 'Size',
+      type: 'string',
+    },
+    {
+      title: 'Tags',
+      name: 'tags',
+      type: 'array',
+      of: [
+        {
+          type: 'string',
+        },
+      ],
+      options: {
+        layout: 'tags',
+      },
+    },
+    {
+      name: 'countInStock',
+      title: 'CountInStock',
+      type: 'number',
+    },
   ],
+
   preview: {
     select: {
       title: 'title',
@@ -49,6 +92,7 @@ export default {
     },
   },
 }
+
 // preview: {
 //   select: {
 //     slug: 'slug.current',

@@ -1,6 +1,6 @@
 import React from 'react'
 
-const EmailRender = ({children}) => <span>{children} 📧</span>
+// const EmailRender = ({children}) => <span>{children} 📧</span>
 
 export default {
   type: 'object',
@@ -46,9 +46,11 @@ export default {
       }
     },
   },
-
-  blockEditor: {
-    icon: () => '📧',
-    render: EmailRender,
-  },
 }
+
+//   blockEditor: {
+//     icon: () => '📧',
+//     render: EmailRender,
+//   },
+//
+//

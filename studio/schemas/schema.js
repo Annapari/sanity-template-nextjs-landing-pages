@@ -9,7 +9,8 @@ import page from './documents/page'
 import route from './documents/route'
 import siteConfig from './documents/siteConfig'
 import product from './documents/products'
-// import productItem from './documents/productItem'
+import category from './documents/category'
+// import ProductsPage from './documents/products'
 
 // Object types
 
@@ -27,7 +28,6 @@ import hero from './objects/hero'
 import imageSection from './objects/imageSection'
 import mailchimp from './objects/mailchimp'
 import textSection from './objects/textSection'
-
 import contact from './objects/contact'
 
 // Then we give our schema to the builder and provide the result to Sanity
@@ -51,7 +51,7 @@ export default createSchema({
     siteConfig,
     textSection,
     gallery,
-
+    category,
     product,
     // productItem,
     contact,
