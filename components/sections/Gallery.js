@@ -16,13 +16,11 @@ function Gallery(props) {
 
   return (
     <div className={styles.root}>
-      <figure className={styles.content}>
-        <img
-          src={builder.image(image).auto('format').width(200).url()}
-          className={styles.image}
-          alt={alt}
-        />
-      </figure>
+      <img
+        src={builder.image(image).auto('format').width(200).url()}
+        className={styles.image}
+        alt={alt}
+      />
     </div>
   )
 }

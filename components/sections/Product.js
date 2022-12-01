@@ -19,23 +19,24 @@ function Product(props) {
   const [count, setCount] = useState(1)
   const handleCount = (value) => (!(count === 0 && value === -1) ? setCount(count + value) : count)
   const {
-    product,
+    // product,
     heading,
-    label,
-    text,
-    subtitle,
+    // label,
+    // text,
+    // subtitle,
     image,
     title,
     description,
     size,
     price,
-    categories,
+    // categories,
     countInStock,
     slug,
   } = props
 
   const addToCartHandler = () => {
-    dispatch(add(product))
+    if (setCount > countInStock) return false
+    // dispatch(add(product))
   }
   // if (!image) {
   //   return null
@@ -46,41 +47,41 @@ function Product(props) {
         {/* <h2 className={styles.heading}>{heading}</h2>
         <p className={styles.subtitle}>{subtitle}</p>
         <div className={styles.grid}> */}
-        <Link href={`/product/${slug.current}`}>
-          <div className={styles.productcard}>
-            <p className={styles.title}>{title}</p>
-            <div className={styles.productDetail}>
-              <img
-                src={builder.image(image).auto('format').width(200).url()}
-                className={styles.image}
-                alt={heading}
-                // src={urlFor(image).width(200).url()}
-              />
-              <div className={styles.productDetails}>
-                <p className={styles.description}>{description}</p>
 
-                <p className={styles.size}>Size: {size}</p>
-                <p className={styles.countInStock}>{countInStock} Available</p>
-                <p className={styles.price}>${price}</p>
-              </div>
-              <div className={styles.counter}>
-                <button onClick={() => handleCount(-1)} className={styles.buttonCount}>
-                  -
-                </button>
-                <span className={styles.description}>{count}</span>
-                <button onClick={() => handleCount(1)} className={styles.buttonCount}>
-                  +
-                </button>
+        <div className={styles.productcard}>
+          <p className={styles.title}>{title}</p>
+          <div className={styles.productDetail}>
+            <img
+              src={builder.image(image).auto('format').width(200).url()}
+              className={styles.image}
+              alt={heading}
+              // src={urlFor(image).width(200).url()}
+            />
+            <div className={styles.productDetails}>
+              <p className={styles.description}>{description}</p>
 
+              <p className={styles.size}>Size: {size}</p>
+              <p className={styles.countInStock}>{countInStock} Available</p>
+              <p className={styles.price}>${price}</p>
+            </div>
+            <div className={styles.counter}>
+              <button onClick={() => handleCount(-1)} className={styles.buttonCount}>
+                -
+              </button>
+              <span className={styles.description}>{count}</span>
+              <button onClick={() => handleCount(1)} className={styles.buttonCount}>
+                +
+              </button>
+              <Link href={`/product/${slug.current}`}>
                 <div className={styles.Button}>
                   <button onClick={addToCartHandler} className={styles.buttonAdd}>
                     Add to Selection
                   </button>
                 </div>
-              </div>
+              </Link>
             </div>
           </div>
-        </Link>
+        </div>
       </div>
     </div>
     // </div>

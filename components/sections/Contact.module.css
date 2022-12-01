@@ -44,14 +44,13 @@
   background-color: var(--color-beige, #fedfbe);
   width: 800px;
   height: 600px;
+  /* height: auto; */
   padding: 0.1rem 0;
 
-  /* @media (--media-min-medium) {
+  /* @media (--media-min-small) {
     display: flex;
     flex-direction: column;
     flex-wrap: hidden;
-    width: 400px;
-    height: 300px;
   } */
 }
 
@@ -74,6 +73,12 @@
   padding: 0.2rem 2rem;
   position: relative;
   max-width: 840px;
+  /* @media (--media-min-medium) {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: hidden; */
+  /* width: 400px;
+    height: 300px; */
 }
 
 .inputGroup {

@@ -63,7 +63,7 @@
   }
 }
 
-/* .captionBox {
+.captionBox {
   background-color: var(--color-white);
   border: 1px solid var(--color-black);
   padding: 1.5rem;
@@ -71,4 +71,4 @@
   @media (--media-min-medium) {
     max-width: calc((var(--width-small) / 2) - 3rem);
   }
-} */
+}

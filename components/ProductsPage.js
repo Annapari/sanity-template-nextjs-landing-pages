@@ -1,6 +1,6 @@
 import {useState} from 'react'
 
-import Product from './Product'
+import Product from './sections/Product'
 
 function ProductsPage({productitems}) {
   return (

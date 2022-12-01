@@ -6,6 +6,8 @@ import SVG from 'react-inlinesvg'
 import styles from './Header.module.css'
 import HamburgerIcon from './icons/Hamburger'
 import {getPathFromSlug, slugParamToPath} from '../utils/urls'
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import {faBagShopping} from '@fortawesome/free-solid-svg-icons'
 
 class Header extends Component {
   state = {showNav: false}
@@ -53,7 +55,12 @@ class Header extends Component {
       showNav: !showNav,
     })
   }
-
+  handleCartToggle = () => {
+    const {showCart} = this.state
+    this.setState({
+      showCart: !showCart,
+    })
+  }
   renderLogo = (logo) => {
     if (!logo || !logo.asset) {
       return null
@@ -69,7 +76,7 @@ class Header extends Component {
   render() {
     const {title = 'Missing title', navItems, router, logo} = this.props
     const {showNav} = this.state
-
+    const {showCart} = this.state
     return (
       <div className={styles.root} data-show-nav={showNav}>
         <h1 className={styles.branding}>
@@ -93,7 +100,13 @@ class Header extends Component {
                   </li>
                 )
               })}
+            <button onClick={this.handleCartToggle} className={styles.button}>
+              <Link href="/selected_items">
+                <FontAwesomeIcon icon={faBagShopping} className={styles.bag}></FontAwesomeIcon>
+              </Link>
+            </button>
           </ul>
+
           <button className={styles.showNavButton} onClick={this.handleMenuToggle}>
             <HamburgerIcon className={styles.hamburgerIcon} />
           </button>

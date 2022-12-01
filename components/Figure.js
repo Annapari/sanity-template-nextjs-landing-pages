@@ -8,6 +8,9 @@ const builder = imageUrlBuilder(client)
 
 function Figure({node}) {
   const {alt, asset} = node
+  // function Figure(props) {
+  //   const {alt, asset} = props
+
   if (!asset) {
     return undefined
   }
@@ -18,7 +21,7 @@ function Figure({node}) {
         className={styles.image}
         alt={alt}
       />
-      {/* {caption && (
+      {caption && (
         <figcaption>
           <div className={styles.caption}>
             <div className={styles.captionBox}>
@@ -26,7 +29,7 @@ function Figure({node}) {
             </div>
           </div>
         </figcaption>
-      )} */}
+      )}
     </figure>
   )
 }

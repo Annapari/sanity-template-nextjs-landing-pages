@@ -8,6 +8,7 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faFacebook, faInstagram} from '@fortawesome/free-brands-svg-icons'
 import {faPhone, faEnvelope} from '@fortawesome/free-solid-svg-icons'
 import Link from 'next/link'
+
 // const ContactPage = () => {
 //   const [submitterName, setSubmitterName] = useState('')
 //   const router = useRouter()
@@ -25,6 +26,19 @@ import Link from 'next/link'
 // </React.Fragment>
 // );
 
+// js form validation  with type = email and the attribute "pattern"
+// const validEmail = document.querySelector("#email");
+// const validfName = document.querySelector('#firstname')
+// // regular expression
+// const validRegex =
+//   /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+//   submit.addEventListener("click", (e) => {
+
+//   if (validEmail.value.match(validRegex) && validName === ' ' )) {
+//     //  valid
+//     e.preventDefault();
+//   }else{validEmail:focus};
 function Contact(props) {
   const {heading, label, text, subtitle, actionUrl} = props
   const [firstname, setFirstName] = useState('')
@@ -33,7 +47,12 @@ function Contact(props) {
   const [phone, setPhone] = useState('')
   const [message, setMessage] = useState('')
   const [submitted, setSubmitted] = useState(false)
-
+  // const validfName = document.querySelector('#firstname')
+  // function show_prompt() {
+  // var namealert = prompt('Please enter your name')
+  // if (validfName != '') {
+  //   alert(validfName)
+  // }
   const handleSubmit = (e) => {
     e.preventDefault()
     console.log('Sending')
@@ -44,8 +63,8 @@ function Contact(props) {
       email,
       phone,
       message,
+      submitted,
     }
-
     fetch('/api/contact', {
       method: 'POST',
       headers: {
@@ -91,7 +110,7 @@ function Contact(props) {
 
           <div className={styles.contact_wrapper}>
             {/* Left contact page */}
-            <form id="contact-form" className={styles.form} role="form">
+            <form id="contact-form" className={styles.form} role="form" onSubmit={'validate()'}>
               <div className={styles.contact_details}>
                 <formGroup id="contact-form" role="form" className={styles.inputGroup}>
                   <label htmlFor="firstname">First Name</label>
@@ -99,6 +118,7 @@ function Contact(props) {
                     id="firstname"
                     type="text"
                     placeholder="First Name"
+                    title="Please enter your first name here"
                     onChange={(e) => {
                       setFirstName(e.target.value)
                     }}
@@ -114,6 +134,7 @@ function Contact(props) {
                     id="lastname"
                     type="text"
                     placeholder="Last Name"
+                    title="Please enter your last name here"
                     onChange={(e) => {
                       setLastName(e.target.value)
                     }}
@@ -129,7 +150,8 @@ function Contact(props) {
                   <input
                     id="email"
                     type="email"
-                    placeholder="Email address"
+                    placeholder="Email"
+                    title="Please enter a valid email address"
                     onChange={(e) => {
                       setEmail(e.target.value)
                     }}
@@ -141,11 +163,12 @@ function Contact(props) {
                   {/* <small>Error Message</small> */}
                 </formGroup>
                 <formGroup className={styles.inputGroup}>
-                  <label htmlFor="phone">Phone</label>
+                  <label htmlFor="phone">Phone (optional)</label>
                   <input
                     id="phone"
                     type="phone"
-                    placeholder="Phone (optional)"
+                    title="Please enter your phone number - this is optional!"
+                    placeholder="Phone Number "
                     onChange={(e) => {
                       setPhone(e.target.value)
                     }}
@@ -166,19 +189,24 @@ function Contact(props) {
                       setMessage(e.target.value)
                     }}
                     name="message"
+                    title="write a message here"
                   />
                   {/* <small>Error Message</small> */}
                 </formGroup>
-
-                <input
-                  className={styles.send_button}
-                  type="submit"
-                  id="submit"
-                  value="SEND"
-                  onClick={(e) => {
-                    handleSubmit(e)
-                  }}
-                />
+                <Link href="/thank_you" id="submit">
+                  <input
+                    title="send me a message"
+                    className={styles.send_button}
+                    type="submit"
+                    id="submit"
+                    alt="send me a message"
+                    value="SEND"
+                    onClick={(e) => {
+                      handleSubmit(e)
+                    }}
+                    name="submitted"
+                  />
+                </Link>
               </div>
             </form>
 
@@ -189,32 +217,37 @@ function Contact(props) {
                 <li className={styles.list_item}>
                   <h3>find me on social media</h3>
                   <ul className={styles.list_item_social}>
-                    <li>
-                      <a
-                        href="https://www.facebook.com/kate.voxtime/"
-                        target="_blank"
-                        class="contact-icon"
-                        title="Follow me on Facebook"
-                      >
-                        <FontAwesomeIcon
-                          style={{fontSize: '25px'}}
-                          icon={faFacebook}
-                        ></FontAwesomeIcon>
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="https://www.instagram.com/katevox_fineart/"
-                        target="_blank"
-                        class="contact-icon"
-                        title="Follow me on Instagram"
-                      >
-                        <FontAwesomeIcon
-                          style={{fontSize: '25px'}}
-                          icon={faInstagram}
-                        ></FontAwesomeIcon>
-                      </a>
-                    </li>
+                    <Link href="https://www.facebook.com/kate.voxtime/">
+                      <li title="Follow me on Facebook">
+                        <a
+                          target="_blank"
+                          class="contact-icon"
+                          // title="Follow me on Facebook"
+                          alt="Follow me on Facebook"
+                        >
+                          <FontAwesomeIcon
+                            style={{fontSize: '25px'}}
+                            icon={faFacebook}
+                          ></FontAwesomeIcon>
+                        </a>
+                      </li>
+                    </Link>
+                    <Link href="https://www.instagram.com/katevox_fineart/" target="_blank">
+                      <li title="Follow me on Instagram">
+                        <a
+                          target="_blank"
+                          class="contact-icon"
+                          // title="Follow me on Instagram"
+                          alt="Follow me on Instagram"
+                          rel="noopener noreferrer"
+                        >
+                          <FontAwesomeIcon
+                            style={{fontSize: '25px'}}
+                            icon={faInstagram}
+                          ></FontAwesomeIcon>
+                        </a>
+                      </li>
+                    </Link>
                   </ul>
                   <li className={styles.list_item}></li>
                   <span className={styles.contact_phone}>

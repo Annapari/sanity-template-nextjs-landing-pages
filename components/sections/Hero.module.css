@@ -4,7 +4,8 @@
   composes: center from '../../styles/shared.module.css';
   position: relative;
   width: 100%;
-  height: 50%;
+  min-height: 31em;
+  /* height: auto; */
   background-color: var(--color-white, #fff);
   color: var(--color-pink, #d1386c);
   background-size: cover;
@@ -14,6 +15,12 @@
 
   @media (--media-min-medium) {
     /* padding-bottom: 4rem; */
+    /* height: 180px; */
+    min-height: 32em;
+  }
+  @media (--media-min-large) {
+    /* padding-bottom: 4rem; */
+    min-height: 35em;
   }
 }
 
@@ -37,7 +44,7 @@
   margin: 0;
   padding: 0;
   margin-top: 0.5em;
-  margin-bottom: 0.1rem;
+  margin-bottom: 0rem;
 }
 
 .title {
@@ -62,10 +69,11 @@
 .tagline {
   position: relative;
   margin: 0;
-  padding: 0;
+  padding: 20px 150px;
   margin-top: 0.5em;
-  margin-bottom: 1rem;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+  color: var(--color-navy-blue, #343b45);
+  /* text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5); */
+  /* background-color: var(--color-light-blue, #9ab8d3); */
 
   @media (--media-min-medium) {
     font-size: var(--font-large-size);

@@ -29,7 +29,7 @@
 .image {
   display: block;
   /* display: flex; */
-  max-height: 25vw;
+  max-height: 30vw;
   width: auto;
   margin: auto;
 }
@@ -49,7 +49,7 @@
   }
 }
 
-/* .caption {
+.caption {
   width: 100%;
   margin: 0 auto;
   box-sizing: border-box;
@@ -57,9 +57,9 @@
   @media (--media-min-medium) {
     max-width: calc(var(--width-small) - 3rem);
   }
-} */
+}
 
-/* .captionBox {
+.captionBox {
   background-color: var(--color-white);
   border: 1px solid var(--color-black);
   padding: 1.5rem;
@@ -67,4 +67,4 @@
   @media (--media-min-medium) {
     max-width: calc((var(--width-small) / 2) - 3rem);
   }
-} */
+}

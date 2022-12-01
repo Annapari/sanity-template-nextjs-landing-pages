@@ -5,7 +5,7 @@ export default function (req, res) {
   let nodemailer = require('nodemailer')
   const transporter = nodemailer.createTransport({
     port: 465,
-    // port: 466,
+
     host: 'smtp.gmail.com',
     auth: {
       user: 'emailfromkatevox@gmail.com',
@@ -15,7 +15,7 @@ export default function (req, res) {
   })
   const mailData = {
     from: 'emailfromkatevox@gmail.com',
-    to: 'annaparis.phillipson@gmail.com',
+    to: 'aphi211@mywhitecliffe.com',
     subject: `Contact Form submission from ${req.body.firstname}`,
     text: req.body.message + ' | Sent from ' + req.body.email,
     html: `<div>${req.body.message}</div>

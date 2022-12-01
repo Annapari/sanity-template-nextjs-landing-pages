@@ -4,6 +4,10 @@ import client from '../client'
 import '../styles/shared.module.css'
 import '../styles/layout.css'
 import '../styles/custom-properties.css'
+import '@fortawesome/fontawesome-svg-core/styles.css'
+import '@fortawesome/fontawesome-svg-core/styles.css' //importing font awesome css
+import {config} from '@fortawesome/fontawesome-svg-core'
+config.autoAddCss = false // Tell Font Awesome to skip adding the CSS automatically since it's being imported above
 
 const siteConfigQuery = `
   *[_id == "global-config"] {

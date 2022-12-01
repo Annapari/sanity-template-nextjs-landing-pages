@@ -1,10 +1,10 @@
-import {MdLocalDrink} from 'react-icons/md'
+import {MdAddShoppingCart} from 'react-icons/md'
 
 export default {
   name: 'product',
   title: 'Product',
   type: 'document',
-  icon: MdLocalDrink,
+  icon: MdAddShoppingCart,
   fields: [
     {
       name: 'title',
