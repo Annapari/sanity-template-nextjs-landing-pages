@@ -12,14 +12,20 @@ A website built for client to showcase her artwork.
 You'll need to clone the GitHub repo or download the files to your local drive. To quickly do this run a terminal on your computer and cd/mkdir for the project to be save into.
 then run this code to clone the git repo
 
-$ git clone 
+$ git clone https://github.com/Annapari/sanity-template-nextjs-landing-pages.git
 
-Open in visual studio code and save a new `.env` file to the main project folder. This will store a few environment variables that Next will use to pull data from the Sanity API.
+After the files have been copied you can run code to open the folder, and then VS code (visual studio code)
 
+$ cd sanity-template-nextjs-landing-pages
+$ code .      
 
-The Project ID is an alphanumeric 8-character string.
+Or manually open VS code and save a new `.env` file to the main project folder. This will store a few environment variables that Next will use to pull data from the Sanity API. Set the following details:
+
+The Project ID is " "
 
 The dataset is  "production".
+
+The Gmail password is " "
 
 Once those env variables are in place, you can run the following commands to get Next's development server up and running:
 
