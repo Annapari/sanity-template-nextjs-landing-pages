@@ -1,71 +1,73 @@
-# Next.js landing pages [![Prettier](https://github.com/sanity-io/sanity-template-nextjs-landing-pages/actions/workflows/prettier.yml/badge.svg?event=push)](https://github.com/sanity-io/sanity-template-nextjs-landing-pages/actions/workflows/prettier.yml) [![CI](https://github.com/sanity-io/sanity-template-nextjs-landing-pages/actions/workflows/ci.yml/badge.svg?event=push)](https://github.com/sanity-io/sanity-template-nextjs-landing-pages/actions/workflows/ci.yml) ![Vercel](https://vercelbadge.vercel.app/api/sanity-io/sanity-template-nextjs-landing-pages)
 
-### [Live demo](https://template-nextjs-landing-pages.sanity.build/)
+# Sanity  Kate Vox Website
 
-_SEO friendly page builder in React.js. Heroes, sign-up forms and calls to action._
-
-The template contains both a Sanity Studio and a front-end in Next.js. Both are deployed on Vercel.
-
-Deployed your own with [sanity.io/create](https://www.sanity.io/create/?template=sanity-io%2Fsanity-template-nextjs-landing-pages).
-
-You can also deploy with Vercel:
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fsanity-io%2Fsanity-template-nextjs-landing-pages&project-name=sanity-next-landing-pages&repository-name=sanity-next-landing-pages&demo-title=Next.js%20landing%20pages&demo-description=SEO%20friendly%20page%20builder%20in%20React.js.%20Heroes%2C%20sign-up%20forms%20and%20calls%20to%20action.&demo-url=https%3A%2F%2Ftemplate-nextjs-landing-pages.sanity.build%2F&demo-image=https%3A%2F%2Fraw.githubusercontent.com%2Fsanity-io%2Fsanity-template-nextjs-landing-pages%2F3ec5538849337ce2a7e231b180418ed2ff3dd20d%2Fassets%2Ffrontend.jpg&integration-ids=oac_hb2LITYajhRQ0i4QznmKH7gx)
-
-![The Sanity.io and Next.js powered landing page website](/.sanity-template/assets/frontend.jpg?raw=true)
-
-## What you have
+A website built for client to showcase her artwork.
 
 - A dynamic frontend with [Next.js](https://nextjs.org)
 - Structured content using [Sanity.io](https://www.sanity.io)
 - Global deployment on [Vercel](https://vercel.com)
 
-## Deploy changes
+## Set up if you need to download the files
 
-Vercel automatically deploys new changes commited to master on GitHub. If you want to change deployment branch, do so in [Customizing the Production Branch on Verce;](https://vercel.com/docs/concepts/git#customizing-the-production-branch).
+You'll need to clone the GitHub repo or download the files to your local drive.
 
-## Stuck? Get help
+Open in visual studio code and check the `.env` file has stored a few environment variables that Next will use to pull data from the Sanity API.
 
-[![Slack Community Button](https://slack.sanity.io/badge.svg)](https://slack.sanity.io/)
 
-Join [Sanity’s developer community](https://slack.sanity.io) or ping us [on twitter](https://twitter.com/sanity_io).
+The Project ID is an alphanumeric 8-character string.
 
-### Running the front-end
-
-You'll need to create a `.env` file to store a few environment variables that Next will use to pull data from the Sanity API.
-
-```dotenv
-NEXT_PUBLIC_SANITY_PROJECT_ID=<YOUR-PROJECT-ID>
-NEXT_PUBLIC_SANITY_DATASET=<YOUR-DATASET-NAME>
-SANITY_STUDIO_API_PROJECT_ID=<YOUR-PROJECT-ID>
-SANITY_STUDIO_API_DATASET=<YOUR-DATASET-NAME>
-```
-
-For instance, your file should look like this:
-
-```dotenv
-NEXT_PUBLIC_SANITY_PROJECT_ID=abcdefgh
-NEXT_PUBLIC_SANITY_DATASET=production
-SANITY_STUDIO_API_PROJECT_ID=abcdefgh
-SANITY_STUDIO_API_DATASET=production
-```
-
-To find these, visit https://manage.sanity.io
-
-The Project ID is displayed once you select your project. It is an alphanumeric 8-character string.
-
-The dataset is the name of the dataset that you want to use. For instance "production".
+The dataset is  "production".
 
 Once those env variables are in place, you can run the following commands to get Next's development server up and running:
 
-```bash
-npm install
+## open a terminal in the project folder and run code:
+$ npm uninstall 
+$ npm install @fortawesome/fontawesome-svg-core @fortawesome/free-solid-svg-icons @fortawesome/react-fontawesome @fortawesome/free-brands-svg-icons
+
+### postinstall
+run code
+$ cd studio 
+$ npx @sanity/cli install
+
+----
+## After you have the files, run the Studio and the Website using localhost
+
+Run Sanity Studio:
+
+whilst still in the studio folder of the project, run code
+$ Sanity start
+
+If successful, the following will appear:
+Content Studio successfully compiled! Go to http://localhost:3333
+
 
 # Run the frontend
-npm run dev
+open a new terminal in the project folder or open the project folder in VS code, run the terminal and enter code:
+$ npm run dev
+CTRL + Click on the localhost address showing or copy the URL and enter it in to the address bar of your bbrowser window - this will open the website
 
-# Run the Studio
-npm run start:sanity
-```
+CTRL + C to quit
+
 
 The blog will be running at `http://localhost:3000`, the Studio will run at `http://localhost:3333`.
+
+Dependencies required include:
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.2.1",
+    "@fortawesome/free-brands-svg-icons": "^6.2.1",
+    "@fortawesome/free-solid-svg-icons": "^6.2.1",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "@portabletext/react": "^1.0.2",
+    "@sanity/client": "^3.0.3",
+    "@sanity/image-url": "^1.0.1",
+    "dotenv": "^16.0.3",
+    "groq": "^2.15.0",
+    "next": "^12.0.9",
+    "next-seo": "^5.1.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-icons": "^4.6.0",
+    "react-inlinesvg": "^2.3.0",
+    "react-mailchimp-form": "^1.0.2",
+    "react-mailchimp-subscribe": "^2.1.3"
+  },
