@@ -19,13 +19,26 @@ After the files have been copied you can run code to open the folder, and then V
 $ cd sanity-template-nextjs-landing-pages
 $ code .      
 
-Or manually open VS code and save a new `.env` file to the main project folder. This will store a few environment variables that Next will use to pull data from the Sanity API. Set the following details:
+Or manually open VS code and create a new `.env` file to the main project folder. This will store a few environment variables that Next.js will use to pull data from the Sanity API and also, Nodemailer to access Gmail. 
 
-The Project ID is " "
+Copy and paste the following code betwen the dotted lines and save.
 
-The dataset is  "production".
+----------------------------
 
-The Gmail password is " "
+# For Next
+NEXT_PUBLIC_SANITY_PROJECT_ID="9yuxo94v"
+NEXT_PUBLIC_SANITY_DATASET="production"
+
+# For Studio
+SANITY_STUDIO_API_PROJECT_ID="9yuxo94v"
+SANITY_STUDIO_API_DATASET="production"
+
+# For contact form / gmail
+password="lokyzlccozwrqdwu"
+
+----------------------------
+
+
 
 Once those env variables are in place, you can run the following commands to get Next's development server up and running:
 
