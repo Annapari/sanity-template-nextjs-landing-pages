@@ -25,16 +25,6 @@ Copy and paste the following code betwen the dotted lines and save.
 
 ----------------------------
 
-# For Next
-NEXT_PUBLIC_SANITY_PROJECT_ID="9yuxo94v"
-NEXT_PUBLIC_SANITY_DATASET="production"
-
-# For Studio
-SANITY_STUDIO_API_PROJECT_ID="9yuxo94v"
-SANITY_STUDIO_API_DATASET="production"
-
-# For contact form / gmail
-password="lokyzlccozwrqdwu"
 
 ----------------------------
 
