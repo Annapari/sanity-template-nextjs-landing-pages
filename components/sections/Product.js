@@ -72,13 +72,13 @@ function Product(props) {
               <button onClick={() => handleCount(1)} className={styles.buttonCount}>
                 +
               </button>
-              <Link href={`/product/${slug.current}`}>
-                <div className={styles.Button}>
-                  <button onClick={addToCartHandler} className={styles.buttonAdd}>
-                    Add to Selection
-                  </button>
-                </div>
-              </Link>
+              {/* <Link href={`/product/${slug.current}`}> */}
+              <div className={styles.Button}>
+                <button onClick={addToCartHandler} className={styles.buttonAdd}>
+                  Add to Selection
+                </button>
+              </div>
+              {/* </Link> */}
             </div>
           </div>
         </div>

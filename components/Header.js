@@ -100,11 +100,11 @@ class Header extends Component {
                   </li>
                 )
               })}
-            <button onClick={this.handleCartToggle} className={styles.button}>
+            {/* <button onClick={this.handleCartToggle} className={styles.button}>
               <Link href="/selected_items">
                 <FontAwesomeIcon icon={faBagShopping} className={styles.bag}></FontAwesomeIcon>
               </Link>
-            </button>
+            </button> */}
           </ul>
 
           <button className={styles.showNavButton} onClick={this.handleMenuToggle}>

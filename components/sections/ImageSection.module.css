@@ -3,7 +3,7 @@
 .root {
   position: relative;
   padding: 1rem 0;
-
+  /* background-color: var(--colour-very-light-gold, #fce9d4); */
   @media (--media-min-medium) {
     padding: 2rem 0;
   }
@@ -29,7 +29,8 @@
 .image {
   display: block;
   /* display: flex; */
-  max-height: 30vw;
+  max-height: 25vh;
+
   width: auto;
   margin: auto;
 }

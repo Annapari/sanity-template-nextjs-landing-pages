@@ -4,7 +4,7 @@ import Link from 'next/link'
 import styles from './Cta.module.css'
 
 function cta(props) {
-  const {title, route, link} = props
+  const {title, route, link, alt} = props
 
   if (route && route.slug && route.slug.current) {
     return (
@@ -15,7 +15,9 @@ function cta(props) {
         }}
         as={`/${route.slug.current}`}
       >
-        <a className={styles.button}>{title}</a>
+        <a className={styles.button} alt={alt}>
+          {title}
+        </a>
       </Link>
     )
   }

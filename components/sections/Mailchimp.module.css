@@ -1,10 +1,11 @@
 @import '../../styles/custom-media.css';
 
 .root {
-  padding: 2rem 0;
+  padding: 3rem 0;
+  background-color: #b9c7d5;
 
   @media (--media-min-medium) {
-    padding: 4rem 0;
+    padding: 2rem 0;
   }
 }
 
@@ -62,7 +63,7 @@
   margin-bottom: 1em;
 
   @nest &[type='name']:focus, &[type='email']:focus {
-    background-color: var(--color-light-gray, #c9d0d8);
+    background-color: var(--colour-very-light-gold, #fce9d4);
     border-color: none;
   }
   @media (--media-min-medium) {

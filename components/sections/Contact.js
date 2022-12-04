@@ -190,10 +190,11 @@ function Contact(props) {
                     }}
                     name="message"
                     title="write a message here"
+                    required
                   />
                   {/* <small>Error Message</small> */}
                 </formGroup>
-                <Link href="/thank_you" id="submit">
+                <Link href="/thank_you" id="submit" title="Click to send!">
                   <input
                     title="send me a message"
                     className={styles.send_button}
@@ -215,7 +216,7 @@ function Contact(props) {
 
               <ul className={styles.contact_list}>
                 <li className={styles.list_item}>
-                  <h3>find me on social media</h3>
+                  <h3 className={styles.contact_head}>find me on social media</h3>
                   <ul className={styles.list_item_social}>
                     <Link href="https://www.facebook.com/kate.voxtime/">
                       <li title="Follow me on Facebook">
@@ -252,7 +253,11 @@ function Contact(props) {
                   <li className={styles.list_item}></li>
                   <span className={styles.contact_phone}>
                     <a href="tel:1-212-555-5555" title="Give me a call">
-                      <FontAwesomeIcon icon={faPhone}></FontAwesomeIcon>
+                      <FontAwesomeIcon
+                        icon={faPhone}
+                        className={styles.contact_icon}
+                      ></FontAwesomeIcon>
+                      {'  '}
                       (212) 555-2368
                     </a>
                   </span>
@@ -265,7 +270,11 @@ function Contact(props) {
                       title="Send me an email"
                       type="email"
                     >
-                      <FontAwesomeIcon icon={faEnvelope}></FontAwesomeIcon>
+                      <FontAwesomeIcon
+                        icon={faEnvelope}
+                        className={styles.contact_icon}
+                      ></FontAwesomeIcon>
+                      {'  '}
                       KateVoxTime@gmail.com
                     </a>
                   </span>

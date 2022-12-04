@@ -53,15 +53,15 @@
   }
 }
 
-.caption {
+/* .caption {
   width: 100%;
   margin: 0 auto;
   box-sizing: border-box;
 
   @media (--media-min-medium) {
     max-width: calc(var(--width-small) - 3rem);
-  }
-}
+  } 
+}*/
 
 .captionBox {
   background-color: var(--color-white);

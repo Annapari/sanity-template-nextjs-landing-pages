@@ -18,6 +18,17 @@ export default {
       type: 'portableText',
       title: 'Text',
     },
+    {
+      name: 'ctas',
+      type: 'array',
+      title: 'Call to actions',
+      of: [
+        {
+          title: 'Call to action',
+          type: 'cta',
+        },
+      ],
+    },
   ],
   preview: {
     select: {

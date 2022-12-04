@@ -81,12 +81,12 @@
   line-height: 3.2rem;
   border-radius: 50%;
   opacity: 0;
-  box-shadow: 0 0 0 1px #fff;
+  box-shadow: 0 0 0 1px var(--colour-very-light-gold, #fce9d4);
   transition: all 0.2s ease-in-out;
 }
 
 .list_item_social li:hover {
-  background-color: var(--color-white, #fff);
+  background-color: var(--colour-very-light-gold, #fce9d4);
 }
 
 .list_item_social li:hover:after {

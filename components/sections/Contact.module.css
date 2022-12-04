@@ -42,16 +42,16 @@
 }
 .contact_container {
   background-color: var(--color-beige, #fedfbe);
-  width: 800px;
-  height: 600px;
+  width: 70vw;
+  /* height: 600px; */
   /* height: auto; */
   padding: 0.1rem 0;
 
-  /* @media (--media-min-small) {
-    display: flex;
+  @media (--media-min-large) {
+    /* display: flex;
     flex-direction: column;
-    flex-wrap: hidden;
-  } */
+    flex-wrap: hidden; */
+  }
 }
 
 .header {
@@ -73,12 +73,14 @@
   padding: 0.2rem 2rem;
   position: relative;
   max-width: 840px;
-  /* @media (--media-min-medium) {
+
+  @media (--media-max-medium) {
     display: flex;
     flex-direction: column;
-    flex-wrap: hidden; */
-  /* width: 400px;
-    height: 300px; */
+    flex-wrap: hidden;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .inputGroup {
@@ -172,15 +174,37 @@
 
 /*  Right Contact Page */
 .contact_socials {
-  max-width: 400px;
+  max-width: 100%;
+  @media (--media-min-large) {
+    display: flex;
+    flex-wrap: hidden;
+    max-width: 25vw;
+  }
+  @media (--media-min-medium) {
+    display: flex;
+    flex-wrap: hidden;
+    max-width: 22vw;
+  }
 }
 .contact_list {
   list-style-type: none;
-  margin-left: -30px;
-  padding-right: 20px;
+  margin-left: -40px;
+  padding-right: 10px;
   text-decoration: none;
+  @media (--media-max-medium) {
+    margin: 0;
+    padding: 0;
+  }
 }
-
+.contact_head {
+  font-size: 1em;
+  @media (--media-min-medium) {
+    font-size: 0.7em;
+  }
+  @media (--media-max-medium) {
+    font-size: 0.8em;
+  }
+}
 .contact_phone a,
 .contact_email a {
   display: inline-block;
@@ -190,6 +214,9 @@
   letter-spacing: 1px;
   text-decoration: none;
   color: var(--color-brown, #b65b2f);
+  @media (--media-min-medium) {
+    font-size: 0.6em;
+  }
   @media (hover: hover) {
     @nest &:hover {
       color: var(--color-pink, #d1386c);

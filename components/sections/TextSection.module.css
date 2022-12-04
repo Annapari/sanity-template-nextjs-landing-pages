@@ -1,10 +1,15 @@
 @import '../../styles/custom-media.css';
 
 .root {
-  padding: 2rem 0;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 3rem;
+  margin-bottom: 3rem;
+  /* background-color: var(--colour-very-light-gold, #fce9d4); */
 
   @media (--media-min-medium) {
-    padding: 1rem 0;
+    padding: 0.5rem 2rem;
     text-align: center;
   }
 }
@@ -13,7 +18,7 @@
   width: 100%;
   max-width: var(--width-small);
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 0.5rem;
   box-sizing: border-box;
   text-align: center;
 }
@@ -54,12 +59,28 @@
   background-color: var(--color-coral-orange, #ea8a7c);
   max-width: 100%;
   padding: 2em 1em;
-  margin: 0em 01em;
+  margin: 0em 1em;
   font-style: italic;
   display: block;
   align-items: center;
   text-align: center;
-  display: block;
   font-weight: 700;
   letter-spacing: 0.5px;
+}
+.ctas {
+  margin: auto;
+  background-color: var(--color-light-blue, #9ab8d3);
+  /* display: block; */
+  border-radius: inherit;
+  text-decoration: inherit;
+  font-weight: 600;
+  max-width: fit-content;
+  transition: transform 50ms ease-in-out;
+  transform: scale(1);
+  cursor: pointer;
+}
+.ctas:hover {
+  /* transform: scale(1.05); */
+  background-color: transparent;
+  color: var(--color-pink, #d1386c);
 }

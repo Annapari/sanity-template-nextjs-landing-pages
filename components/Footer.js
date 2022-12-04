@@ -33,37 +33,35 @@ function Footer(props) {
 
           <div className={styles.list_item_social}>
             <ul>
-              <li>
-                <Link href="https://www.facebook.com/kate.voxtime/">
+              <Link
+                href="https://www.facebook.com/kate.voxtime/"
+                class="contact-icon"
+                rel="noopener noreferrer"
+                target="NEXT_PUBLIC_blank"
+              >
+                <li title="Follow me on Facebook" alt="Follow me on Facebook" target="_blank">
                   <a
                     // href="https://www.facebook.com/kate.voxtime/"
 
                     class="contact-icon"
-                    title="Follow me on Facebook"
-                    alt="Follow me on Facebook"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    // target="_blank"
                   >
                     <FontAwesomeIcon icon={faFacebook}></FontAwesomeIcon>
                   </a>
-                </Link>
-              </li>
+                </li>
+              </Link>
+
               <Link
                 href="https://www.instagram.com/katevox_fineart/"
                 class="contact-icon"
-                title="Follow me on Instagram"
-                alt="Follow me on Instagram"
-                target="_blank"
                 rel="noopener noreferrer"
+                target="NEXT_PUBLIC_blank"
               >
-                <li>
+                <li title="Follow me on Instagram" alt="Follow me on Instagram">
                   <a
-                    // href="https://www.instagram.com/katevox_fineart/"target="_blank"
                     class="contact-icon"
-                    title="Follow me on Instagram"
-                    alt="Follow me on Instagram"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    // target="_blank"
+                    // rel="noopener noreferrer"
                   >
                     <FontAwesomeIcon icon={faInstagram}></FontAwesomeIcon>
                   </a>

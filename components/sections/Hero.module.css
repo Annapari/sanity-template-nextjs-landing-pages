@@ -4,14 +4,14 @@
   composes: center from '../../styles/shared.module.css';
   position: relative;
   width: 100%;
-  min-height: 31em;
+  min-height: 31vh;
   /* height: auto; */
   background-color: var(--color-white, #fff);
   color: var(--color-pink, #d1386c);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  /* padding-bottom: 0.1rem; */
+  padding-bottom: 0.1rem;
 
   @media (--media-min-medium) {
     /* padding-bottom: 4rem; */
@@ -31,7 +31,7 @@
   left: 0;
   /* background-image: linear-gradient(#2220, rgba(255, 255, 255, 0.673)); */
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
   z-index: 0;
 }
 
